@@ -1,5 +1,6 @@
 import { AtSign, GraduationCap, Phone } from "lucide-react";
 import { ReactNode } from "react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -48,6 +49,24 @@ const Services = () => {
   );
 };
 
+const WhoAmI = () => {
+  return (
+    <section className="mx-auto my-4 flex w-full max-w-lg flex-col items-center gap-4 sm:flex-row">
+      <Image
+        src="https://placehold.co/400x400?text=Headshot"
+        alt="Headshot of Edward Mortimer"
+        width={400}
+        height={400}
+        className="size-36 sm:size-28 rounded-full"
+      />
+      <p className="text-center text-lg sm:text-left">
+        I'm Edward Mortimer, a local English teacher with more than 11 years of
+        experience.
+      </p>
+    </section>
+  );
+};
+
 const Contact = () => {
   return (
     <section className="mx-auto w-full max-w-lg">
@@ -78,6 +97,7 @@ export default function Home() {
     <main className="min-h-screen px-4">
       <Hero />
       <Services />
+      <WhoAmI />
       <Contact />
     </main>
   );
