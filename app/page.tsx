@@ -1,4 +1,5 @@
-import { GraduationCap } from "lucide-react";
+import { AtSign, GraduationCap, Phone } from "lucide-react";
+import { ReactNode } from "react";
 
 const Hero = () => {
   return (
@@ -13,11 +14,21 @@ const Hero = () => {
   );
 };
 
+const ListItem = ({ icon, text }: { icon: ReactNode; text: ReactNode }) => {
+  return (
+    <li className="my-1 flex flex-row items-center gap-3">
+      {icon}
+      {text}
+    </li>
+  );
+};
+
 const ServiceListItem = ({ text }: { text: string }) => {
   return (
-    <li className="my-1 flex flex-row items-center gap-2">
-      <GraduationCap className="size-5" /> <span>{text}</span>
-    </li>
+    <ListItem
+      icon={<GraduationCap className="size-5" />}
+      text={<span>{text}</span>}
+    />
   );
 };
 
@@ -41,10 +52,16 @@ const Contact = () => {
   return (
     <section className="mx-auto w-full max-w-lg">
       <div className="text-lg font-bold">Message me for more information</div>
-      <div>
-        <div>SMS: 07775 213822</div>
-        <div>Email: edwardmortimer@live.com</div>
-      </div>
+      <ul>
+        <ListItem
+          icon={<Phone className="size-5" />}
+          text={<span>07775 213822</span>}
+        />
+        <ListItem
+          icon={<AtSign className="size-5" />}
+          text={<span>edwardmortimer@live.com</span>}
+        />
+      </ul>
     </section>
   );
 };
