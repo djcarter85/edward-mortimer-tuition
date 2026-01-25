@@ -27,7 +27,7 @@ const ListItem = ({ icon, text }: { icon: ReactNode; text: ReactNode }) => {
 const ServiceListItem = ({ text }: { text: string }) => {
   return (
     <ListItem
-      icon={<GraduationCap className="size-5" />}
+      icon={<GraduationCap className="size-5 text-emerald-700" />}
       text={<span>{text}</span>}
     />
   );
@@ -57,7 +57,7 @@ const WhoAmI = () => {
         alt="Headshot of Edward Mortimer"
         width={400}
         height={400}
-        className="size-36 rounded-full sm:size-28"
+        className="size-36 rounded-full ring-2 ring-emerald-700 ring-offset-4 sm:size-28"
       />
       <p className="text-center text-lg sm:text-left">
         I'm Edward Mortimer, a local English teacher with more than 11 years of
@@ -70,7 +70,7 @@ const WhoAmI = () => {
 const Price = ({ level, price }: { level: string; price: number }) => {
   return (
     <div>
-      {level} <span className="text-2xl">£{price}</span>/hour
+      {level} <span className="text-2xl text-emerald-700 font-bold">£{price}</span>/hour
     </div>
   );
 };
@@ -112,7 +112,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-5">
+    <main className="min-h-screen px-5 border-y-8 border-emerald-700">
       <Hero />
       <Services />
       <WhoAmI />
