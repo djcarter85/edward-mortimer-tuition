@@ -2,7 +2,7 @@ import { GraduationCap } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="flex w-full flex-col gap-4 p-10">
+    <section className="mx-auto flex w-full max-w-4xl flex-col gap-4 p-10">
       <div className="text-center text-5xl font-bold">
         Edward Mortimer Tuition
       </div>
@@ -23,7 +23,7 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto flex w-full max-w-lg flex-col gap-2">
+    <section className="mx-auto w-full max-w-lg">
       <div className="text-lg font-bold">
         Would your child benefit from high-quality English tuition?
       </div>
@@ -39,7 +39,7 @@ const Services = () => {
 
 const Contact = () => {
   return (
-    <section className="mx-auto flex w-full max-w-lg flex-col gap-2">
+    <section className="mx-auto w-full max-w-lg">
       <div className="text-lg font-bold">Message me for more information</div>
       <div>
         <div>SMS: 07775 213822</div>
@@ -51,7 +51,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-4xl flex-col gap-4 px-4">
+    <main className="min-h-screen px-4">
       <Hero />
       <Services />
       <Contact />
