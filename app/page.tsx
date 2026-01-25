@@ -59,7 +59,14 @@ const Contact = () => {
         />
         <ListItem
           icon={<AtSign className="size-5" />}
-          text={<span>edwardmortimer@live.com</span>}
+          text={
+            <a
+              href="mailto:edwardmortimer@live.com"
+              className="underline hover:no-underline"
+            >
+              edwardmortimer@live.com
+            </a>
+          }
         />
       </ul>
     </section>
