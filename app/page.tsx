@@ -100,7 +100,7 @@ const Contact = () => {
           text={
             <a
               href="mailto:edwardmortimer@live.com"
-              className="underline hover:no-underline"
+              className="underline hover:no-underline text-emerald-700"
             >
               edwardmortimer@live.com
             </a>
