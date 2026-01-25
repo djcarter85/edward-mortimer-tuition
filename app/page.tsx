@@ -57,12 +57,30 @@ const WhoAmI = () => {
         alt="Headshot of Edward Mortimer"
         width={400}
         height={400}
-        className="size-36 sm:size-28 rounded-full"
+        className="size-36 rounded-full sm:size-28"
       />
       <p className="text-center text-lg sm:text-left">
         I'm Edward Mortimer, a local English teacher with more than 11 years of
         experience.
       </p>
+    </section>
+  );
+};
+
+const Price = ({ level, price }: { level: string; price: number }) => {
+  return (
+    <div>
+      {level} <span className="text-2xl">£{price}</span>/hour
+    </div>
+  );
+};
+
+const Prices = () => {
+  return (
+    <section className="mx-auto my-4 w-full max-w-lg">
+      <Price level="Key Stage 2" price={30} />
+      <Price level="Key Stage 3 and GCSE" price={35} />
+      <Price level="A Level" price={45} />
     </section>
   );
 };
@@ -98,6 +116,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhoAmI />
+      <Prices />
       <Contact />
     </main>
   );
