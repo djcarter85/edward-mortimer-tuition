@@ -17,8 +17,8 @@ const Hero = () => {
 
 const ListItem = ({ icon, text }: { icon: ReactNode; text: ReactNode }) => {
   return (
-    <li className="my-1 flex flex-row items-center gap-3">
-      {icon}
+    <li className="flex items-start gap-x-3 text-base/6">
+      <span className="flex h-lh items-center">{icon}</span>
       {text}
     </li>
   );
@@ -27,7 +27,7 @@ const ListItem = ({ icon, text }: { icon: ReactNode; text: ReactNode }) => {
 const ServiceListItem = ({ text }: { text: string }) => {
   return (
     <ListItem
-      icon={<GraduationCap className="size-5 text-emerald-700" />}
+      icon={<GraduationCap className="size-5 flex-none text-emerald-700" />}
       text={<span>{text}</span>}
     />
   );
@@ -35,11 +35,11 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto my-4 w-full max-w-lg">
+    <section className="mx-auto my-4 w-full max-w-lg space-y-4">
       <div className="text-lg font-bold">
         Would your child benefit from high-quality English tuition?
       </div>
-      <ul>
+      <ul className="space-y-2">
         <ServiceListItem text="Exam preparation" />
         <ServiceListItem text="Spelling, punctuation and grammar" />
         <ServiceListItem text="Reading comprehension" />
@@ -70,7 +70,8 @@ const WhoAmI = () => {
 const Price = ({ level, price }: { level: string; price: number }) => {
   return (
     <div>
-      {level} <span className="text-2xl text-emerald-700 font-bold">£{price}</span>/hour
+      {level}{" "}
+      <span className="text-2xl font-bold text-emerald-700">£{price}</span>/hour
     </div>
   );
 };
@@ -112,7 +113,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-5 border-y-8 border-emerald-700">
+    <main className="min-h-screen border-y-8 border-emerald-700 px-5">
       <Hero />
       <Services />
       <WhoAmI />
