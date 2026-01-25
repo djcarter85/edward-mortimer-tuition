@@ -94,7 +94,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-4">
+    <main className="min-h-screen px-5">
       <Hero />
       <Services />
       <WhoAmI />
