@@ -35,7 +35,7 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto w-full max-w-lg">
+    <section className="mx-auto my-4 w-full max-w-lg">
       <div className="text-lg font-bold">
         Would your child benefit from high-quality English tuition?
       </div>
@@ -87,7 +87,7 @@ const Prices = () => {
 
 const Contact = () => {
   return (
-    <section className="mx-auto w-full max-w-lg">
+    <section className="mx-auto my-4 w-full max-w-lg">
       <div className="text-lg font-bold">Message me for more information</div>
       <ul>
         <ListItem
