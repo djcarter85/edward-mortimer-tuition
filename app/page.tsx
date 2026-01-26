@@ -51,7 +51,7 @@ const Services = () => {
 
 const WhoAmI = () => {
   return (
-    <section className="mx-auto my-10 w-full max-w-xs overflow-hidden rounded-2xl border border-gray-300 text-center shadow-2xl">
+    <section className="mx-auto my-10 w-full max-w-xs overflow-hidden rounded-2xl border border-gray-300 text-center shadow-xl">
       <div className="relative">
         <div className="px-6 pt-6 pb-24 text-pretty italic">
           I'm Edward Mortimer, a local English teacher with more than 11 years
@@ -78,7 +78,7 @@ const Price = ({ level, price }: { level: string; price: number }) => {
     <div className="-space-y-1 text-center">
       <div>{level}</div>
       <div>
-        <span className="mr-1 text-2xl font-bold text-emerald-700">
+        <span className="mr-0.5 text-2xl font-bold text-emerald-700">
           £{price}
         </span>
         /hour
