@@ -69,18 +69,23 @@ const WhoAmI = () => {
 
 const Price = ({ level, price }: { level: string; price: number }) => {
   return (
-    <div>
-      {level}{" "}
-      <span className="text-2xl font-bold text-emerald-700">£{price}</span>/hour
+    <div className="-space-y-1 text-center">
+      <div>{level}</div>
+      <div>
+        <span className="mr-1 text-2xl font-bold text-emerald-700">
+          £{price}
+        </span>
+        /hour
+      </div>
     </div>
   );
 };
 
 const Prices = () => {
   return (
-    <section className="mx-auto my-4 w-full max-w-lg">
-      <Price level="Key Stage 2" price={30} />
-      <Price level="Key Stage 3 and GCSE" price={35} />
+    <section className="mx-auto my-4 grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-3">
+      <Price level="KS2" price={30} />
+      <Price level="KS3 & GCSE" price={35} />
       <Price level="A Level" price={45} />
     </section>
   );
@@ -100,7 +105,7 @@ const Contact = () => {
           text={
             <a
               href="mailto:edwardmortimer@live.com"
-              className="underline hover:no-underline text-emerald-700"
+              className="text-emerald-700 underline hover:no-underline"
             >
               edwardmortimer@live.com
             </a>
