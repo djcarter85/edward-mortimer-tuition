@@ -51,18 +51,24 @@ const Services = () => {
 
 const WhoAmI = () => {
   return (
-    <section className="mx-auto my-8 flex w-full max-w-lg flex-col items-center gap-4 sm:flex-row">
-      <Image
-        src="https://placehold.co/400x400?text=Headshot"
-        alt="Headshot of Edward Mortimer"
-        width={400}
-        height={400}
-        className="size-36 rounded-full ring-2 ring-emerald-700 ring-offset-4 sm:size-28"
-      />
-      <p className="text-center text-lg sm:text-left">
-        I'm Edward Mortimer, a local English teacher with more than 11 years of
-        experience.
-      </p>
+    <section className="mx-auto my-10 w-full max-w-xs overflow-hidden rounded-2xl border border-gray-300 text-center shadow-2xl">
+      <div className="relative">
+        <div className="px-6 pt-6 pb-24 text-pretty italic">
+          I'm Edward Mortimer, a local English teacher with more than 11 years
+          of experience.
+        </div>
+        <div className="absolute inset-x-0 -bottom-18 text-center">
+          <img
+            src="https://placehold.co/400x400?text=Headshot"
+            className="mx-auto size-36 rounded-full border-4 border-white"
+          />
+        </div>
+      </div>
+      <div className="space-y-1 bg-emerald-700 px-6 pt-24 pb-6">
+        <div className="text-lg font-bold tracking-wider text-white uppercase">
+          Edward Mortimer
+        </div>
+      </div>
     </section>
   );
 };
@@ -105,7 +111,7 @@ const Contact = () => {
           text={
             <a
               href="mailto:edwardmortimer@live.com"
-              className="underline hover:no-underline "
+              className="underline hover:no-underline"
             >
               edwardmortimer@live.com
             </a>
