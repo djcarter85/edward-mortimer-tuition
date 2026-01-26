@@ -35,11 +35,11 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto my-4 w-full max-w-lg space-y-4">
+    <section className="mx-auto my-8 w-full max-w-lg space-y-2">
       <div className="text-lg font-bold">
         Would your child benefit from high-quality English tuition?
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         <ServiceListItem text="Exam preparation" />
         <ServiceListItem text="Spelling, punctuation and grammar" />
         <ServiceListItem text="Reading comprehension" />
@@ -51,7 +51,7 @@ const Services = () => {
 
 const WhoAmI = () => {
   return (
-    <section className="mx-auto my-4 flex w-full max-w-lg flex-col items-center gap-4 sm:flex-row">
+    <section className="mx-auto my-8 flex w-full max-w-lg flex-col items-center gap-4 sm:flex-row">
       <Image
         src="https://placehold.co/400x400?text=Headshot"
         alt="Headshot of Edward Mortimer"
@@ -83,7 +83,7 @@ const Price = ({ level, price }: { level: string; price: number }) => {
 
 const Prices = () => {
   return (
-    <section className="mx-auto my-4 grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-3">
+    <section className="mx-auto my-8 grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-3">
       <Price level="KS2" price={30} />
       <Price level="KS3 & GCSE" price={35} />
       <Price level="A Level" price={45} />
@@ -93,19 +93,19 @@ const Prices = () => {
 
 const Contact = () => {
   return (
-    <section className="mx-auto my-4 w-full max-w-lg">
+    <section className="mx-auto my-8 w-full max-w-lg space-y-2">
       <div className="text-lg font-bold">Message me for more information</div>
-      <ul>
+      <ul className="space-y-1">
         <ListItem
-          icon={<Phone className="size-5" />}
+          icon={<Phone className="size-5 flex-none text-emerald-700" />}
           text={<span>07775 213822</span>}
         />
         <ListItem
-          icon={<AtSign className="size-5" />}
+          icon={<AtSign className="size-5 flex-none text-emerald-700" />}
           text={
             <a
               href="mailto:edwardmortimer@live.com"
-              className="text-emerald-700 underline hover:no-underline"
+              className="underline hover:no-underline "
             >
               edwardmortimer@live.com
             </a>
