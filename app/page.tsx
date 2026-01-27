@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="mx-auto flex w-full max-w-4xl flex-col gap-4 p-10">
+    <section className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5 py-10">
       <div className="text-center text-5xl font-bold">
         Edward Mortimer Tuition
       </div>
@@ -35,7 +35,7 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto my-8 w-full max-w-lg">
+    <section className="mx-auto my-8 w-full max-w-lg px-5">
       <p className="mb-3 text-lg font-bold">
         Would your child benefit from high-quality English tuition?
       </p>
@@ -56,7 +56,7 @@ const Services = () => {
 
 const WhoAmI = () => {
   return (
-    <section>
+    <section className="px-5">
       <div className="mx-auto my-10 w-full max-w-xs overflow-hidden rounded-2xl border border-gray-300 text-center shadow-xl">
         <div className="relative">
           <p className="px-6 pt-6 pb-24 text-pretty italic">
@@ -115,7 +115,7 @@ const Price = ({ level, price }: { level: string; price: number }) => {
 
 const Prices = () => {
   return (
-    <section className="mx-auto my-8 grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-3">
+    <section className="mx-auto my-8 grid w-full max-w-lg grid-cols-2 space-y-2 px-5 sm:grid-cols-3">
       <Price level="Key Stage 2" price={30} />
       <Price level="Key Stage 3 & GCSE" price={35} />
       <Price level="A Level" price={45} />
@@ -125,7 +125,7 @@ const Prices = () => {
 
 const Contact = () => {
   return (
-    <section className="mx-auto my-8 w-full max-w-lg">
+    <section className="mx-auto my-8 w-full max-w-lg px-5">
       <p className="mb-3">
         If you would like to discuss English tutoring for your child, please
         contact me via one of the following channels.
@@ -154,7 +154,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen border-y-8 border-emerald-700 px-5">
+    <main className="min-h-screen border-y-8 border-emerald-700">
       <Hero />
       <Services />
       <WhoAmI />
