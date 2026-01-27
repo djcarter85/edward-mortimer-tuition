@@ -35,16 +35,21 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto my-8 w-full max-w-lg space-y-2">
-      <div className="text-lg font-bold">
+    <section className="mx-auto my-8 w-full max-w-lg">
+      <p className="mb-3 text-lg font-bold">
         Would your child benefit from high-quality English tuition?
-      </div>
-      <ul className="space-y-1">
+      </p>
+      <ul className="mb-3 space-y-1">
         <ServiceListItem text="Exam preparation" />
         <ServiceListItem text="Spelling, punctuation and grammar" />
         <ServiceListItem text="Reading comprehension" />
         <ServiceListItem text="Homework assignments" />
       </ul>
+      <p className="mb-3">
+        As part of my service, I travel to you in your home. I am currently
+        taking on students from the Alconburys, Sawtry and Huntingdon, as well
+        as the wider area as far as Cambridge.
+      </p>
     </section>
   );
 };
