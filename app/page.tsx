@@ -76,7 +76,7 @@ const WhoAmI = () => {
 const Price = ({ level, price }: { level: string; price: number }) => {
   return (
     <div className="-space-y-1 text-center">
-      <div>{level}</div>
+      <h3 className="text-pretty">{level}</h3>
       <div>
         <span className="mr-0.5 text-2xl font-bold text-emerald-700">
           £{price}
@@ -90,8 +90,8 @@ const Price = ({ level, price }: { level: string; price: number }) => {
 const Prices = () => {
   return (
     <section className="mx-auto my-8 grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-3">
-      <Price level="KS2" price={30} />
-      <Price level="KS3 & GCSE" price={35} />
+      <Price level="Key Stage 2" price={30} />
+      <Price level="Key Stage 3 & GCSE" price={35} />
       <Price level="A Level" price={45} />
     </section>
   );
