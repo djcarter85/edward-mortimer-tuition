@@ -99,13 +99,12 @@ const Prices = () => {
 
 const Contact = () => {
   return (
-    <section className="mx-auto my-8 w-full max-w-lg space-y-2">
-      <div className="text-lg font-bold">Message me for more information</div>
-      <ul className="space-y-1">
-        <ListItem
-          icon={<Phone className="size-5 flex-none text-emerald-700" />}
-          text={<span>07775 213822</span>}
-        />
+    <section className="mx-auto my-8 w-full max-w-lg">
+      <p className="mb-3">
+        If you would like to discuss English tutoring for your child, please
+        contact me via one of the following channels.
+      </p>
+      <ul className="mb-3 space-y-1">
         <ListItem
           icon={<AtSign className="size-5 flex-none text-emerald-700" />}
           text={
@@ -117,7 +116,12 @@ const Contact = () => {
             </a>
           }
         />
+        <ListItem
+          icon={<Phone className="size-5 flex-none text-emerald-700" />}
+          text={<span>07775 213822</span>}
+        />
       </ul>
+      <p className="mb-3">I look forward to hearing from you!</p>
     </section>
   );
 };
