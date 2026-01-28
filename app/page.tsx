@@ -120,7 +120,8 @@ const Prices = () => {
     <section className="w-full border-t-2 border-gray-300 px-5 py-5">
       <ul className="mx-auto grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-3">
         <Price level="Key Stage 2" price={30} />
-        <Price level="Key Stage 3 & GCSE" price={35} />
+        <Price level="Key Stage 3" price={35} />
+        <Price level="GCSE" price={35} />
         <Price level="A Level" price={45} />
       </ul>
     </section>
