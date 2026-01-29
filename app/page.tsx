@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="w-full py-10">
+    <section className="hero w-full py-16">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5">
-        <div className="text-center text-5xl font-bold">
+        <div className="text-center text-7xl text-emerald-50 tracking-wide">
           Edward Mortimer Tuition
         </div>
-        <div className="text-center text-xl">
+        <div className="text-center text-xl text-gray-100">
           Expert English tuition in your home
         </div>
       </div>
@@ -124,10 +124,12 @@ const Prices = () => {
     <section className="w-full border-t-2 border-gray-300 py-5">
       <div className="mx-auto w-full max-w-md px-5">
         <table className="w-full text-center">
-          <Price level="Key Stage 2" price={30} />
-          <Price level="Key Stage 3" price={35} />
-          <Price level="GCSE" price={35} />
-          <Price level="A Level" price={45} />
+          <tbody>
+            <Price level="Key Stage 2" price={30} />
+            <Price level="Key Stage 3" price={35} />
+            <Price level="GCSE" price={35} />
+            <Price level="A Level" price={45} />
+          </tbody>
         </table>
       </div>
     </section>
@@ -167,7 +169,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen border-y-8 border-emerald-700">
+    <main className="min-h-screen border-b-8 border-emerald-800">
       <Hero />
       <Services />
       <WhoAmI />
