@@ -107,27 +107,29 @@ const WhoAmI = () => {
 
 const Price = ({ level, price }: { level: string; price: number }) => {
   return (
-    <li className="-space-y-1 text-center">
-      <h3 className="text-pretty">{level}</h3>
-      <div>
+    <tr>
+      <td className="text-pretty">{level}</td>
+      <td>
         <span className="mr-0.5 text-2xl font-bold text-emerald-700">
           £{price}
         </span>
         /hour
-      </div>
-    </li>
+      </td>
+    </tr>
   );
 };
 
 const Prices = () => {
   return (
     <section className="w-full border-t-2 border-gray-300 py-5">
-      <ul className="mx-auto grid w-full max-w-lg grid-cols-2 space-y-2 px-5 sm:grid-cols-4">
-        <Price level="Key Stage 2" price={30} />
-        <Price level="Key Stage 3" price={35} />
-        <Price level="GCSE" price={35} />
-        <Price level="A Level" price={45} />
-      </ul>
+      <div className="mx-auto w-full max-w-md px-5">
+        <table className="w-full text-center">
+          <Price level="Key Stage 2" price={30} />
+          <Price level="Key Stage 3" price={35} />
+          <Price level="GCSE" price={35} />
+          <Price level="A Level" price={45} />
+        </table>
+      </div>
     </section>
   );
 };
