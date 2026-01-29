@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero w-full py-16">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5">
-        <div className="text-center text-7xl tracking-wide text-emerald-50">
+        <div className="text-center text-6xl tracking-wide text-emerald-50">
           Edward Mortimer Tuition
         </div>
         <div className="text-center text-xl text-gray-100">
@@ -57,16 +57,16 @@ const WhoAmI = () => {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-lg px-5">
-        <div className="flex flex-col sm:flex-row gap-x-4">
+        <div className="flex flex-col gap-x-4 sm:flex-row">
           <img
             src={edwardMortimer.src}
             alt="Edward Mortimer"
             className="mx-auto mb-4 max-w-48 rounded-xl shadow-xl"
           />
-          <p className="mb-3">
-            Hello! My name is Edward Mortimer, and I am an experienced English
-            teacher based in Alconbury Weald, Cambridgeshire. I live with my
-            wife and two young children.
+          <p className="mb-3 sm:text-lg">
+            Hello! My name is <strong>Edward Mortimer</strong>, and I am an
+            experienced English teacher based in Alconbury Weald,
+            Cambridgeshire. I live with my wife and two young children.
           </p>
         </div>
         <p className="mb-3">
@@ -85,8 +85,9 @@ const WhoAmI = () => {
         </p>
         <p className="mb-3">
           As part of my service, I travel to you in your home. I am currently
-          taking on students from the Alconburys, Sawtry and Huntingdon, as well
-          as the wider area as far as Cambridge.
+          taking on students from the <strong>Alconburys</strong>,{" "}
+          <strong>Sawtry</strong> and <strong>Huntingdon</strong>, as well as
+          the wider area as far as <strong>Cambridge</strong>.
         </p>
       </div>
     </section>
@@ -96,12 +97,12 @@ const WhoAmI = () => {
 const Price = ({ level, price }: { level: string; price: number }) => {
   return (
     <tr>
-      <td className="text-pretty">{level}</td>
-      <td>
-        <span className="mr-0.5 text-2xl font-bold text-emerald-700">
+      <td className="py-1 text-lg text-pretty">{level}</td>
+      <td className="py-1">
+        <span className="mr-0.5 text-3xl font-bold text-emerald-700">
           £{price}
         </span>
-        /hour
+        <span>/hour</span>
       </td>
     </tr>
   );
