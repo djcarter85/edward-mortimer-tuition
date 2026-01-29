@@ -1,12 +1,12 @@
 import { AtSign, GraduationCap, Phone } from "lucide-react";
 import { ReactNode } from "react";
-import Image from "next/image";
+import edwardMortimer from "./edward-mortimer.jpg";
 
 const Hero = () => {
   return (
     <section className="hero w-full py-16">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5">
-        <div className="text-center text-7xl text-emerald-50 tracking-wide">
+        <div className="text-center text-7xl tracking-wide text-emerald-50">
           Edward Mortimer Tuition
         </div>
         <div className="text-center text-xl text-gray-100">
@@ -48,11 +48,6 @@ const Services = () => {
           <ServiceListItem text="Reading comprehension" />
           <ServiceListItem text="Homework assignments" />
         </ul>
-        <p className="mb-3">
-          As part of my service, I travel to you in your home. I am currently
-          taking on students from the Alconburys, Sawtry and Huntingdon, as well
-          as the wider area as far as Cambridge.
-        </p>
       </div>
     </section>
   );
@@ -62,30 +57,18 @@ const WhoAmI = () => {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-lg px-5">
-        <div className="mx-auto my-10 w-full max-w-xs overflow-hidden rounded-2xl border border-gray-300 text-center shadow-xl">
-          <div className="relative">
-            <p className="px-6 pt-6 pb-24 text-pretty italic">
-              I'm Edward Mortimer, a local English teacher with more than 11
-              years of experience.
-            </p>
-            <div className="absolute inset-x-0 -bottom-18 text-center">
-              <img
-                src="https://placehold.co/400x400?text=Headshot"
-                className="mx-auto size-36 rounded-full border-4 border-white"
-              />
-            </div>
-          </div>
-          <div className="space-y-1 bg-emerald-700 px-6 pt-24 pb-6">
-            <h1 className="text-lg font-bold tracking-wider text-white uppercase">
-              Edward Mortimer
-            </h1>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-x-4">
+          <img
+            src={edwardMortimer.src}
+            alt="Edward Mortimer"
+            className="mx-auto mb-4 max-w-48 rounded-xl shadow-xl"
+          />
+          <p className="mb-3">
+            Hello! My name is Edward Mortimer, and I am an experienced English
+            teacher based in Alconbury Weald, Cambridgeshire. I live with my
+            wife and two young children.
+          </p>
         </div>
-        <p className="mb-3">
-          Hello! My name is Edward Mortimer, and I am an experienced English
-          teacher based in Alconbury Weald, Cambridgeshire. I live with my wife
-          and two young children.
-        </p>
         <p className="mb-3">
           Having qualified through the prestigious Teach First programme in
           2015, I gained experience in a wide range of schools, from grammar
@@ -99,6 +82,11 @@ const WhoAmI = () => {
           Key Stage 3. When I tutor, I ensure that the lessons are
           student-focused; in short, I go at a pace that suits your child,
           guaranteeing they make rapid progress.
+        </p>
+        <p className="mb-3">
+          As part of my service, I travel to you in your home. I am currently
+          taking on students from the Alconburys, Sawtry and Huntingdon, as well
+          as the wider area as far as Cambridge.
         </p>
       </div>
     </section>
