@@ -4,12 +4,14 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5 py-10">
-      <div className="text-center text-5xl font-bold">
-        Edward Mortimer Tuition
-      </div>
-      <div className="text-center text-xl">
-        Expert English tuition in your home
+    <section className="w-full py-10">
+      <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-5">
+        <div className="text-center text-5xl font-bold">
+          Edward Mortimer Tuition
+        </div>
+        <div className="text-center text-xl">
+          Expert English tuition in your home
+        </div>
       </div>
     </section>
   );
@@ -35,29 +37,31 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Services = () => {
   return (
-    <section className="mx-auto my-8 w-full max-w-lg px-5">
-      <p className="mb-3 text-lg font-bold">
-        Would your child benefit from high-quality English tuition?
-      </p>
-      <ul className="mb-3 space-y-1">
-        <ServiceListItem text="Exam preparation" />
-        <ServiceListItem text="Spelling, punctuation and grammar" />
-        <ServiceListItem text="Reading comprehension" />
-        <ServiceListItem text="Homework assignments" />
-      </ul>
-      <p className="mb-3">
-        As part of my service, I travel to you in your home. I am currently
-        taking on students from the Alconburys, Sawtry and Huntingdon, as well
-        as the wider area as far as Cambridge.
-      </p>
+    <section className="w-full">
+      <div className="mx-auto my-8 w-full max-w-lg px-5">
+        <p className="mb-3 text-lg font-bold">
+          Would your child benefit from high-quality English tuition?
+        </p>
+        <ul className="mb-3 space-y-1">
+          <ServiceListItem text="Exam preparation" />
+          <ServiceListItem text="Spelling, punctuation and grammar" />
+          <ServiceListItem text="Reading comprehension" />
+          <ServiceListItem text="Homework assignments" />
+        </ul>
+        <p className="mb-3">
+          As part of my service, I travel to you in your home. I am currently
+          taking on students from the Alconburys, Sawtry and Huntingdon, as well
+          as the wider area as far as Cambridge.
+        </p>
+      </div>
     </section>
   );
 };
 
 const WhoAmI = () => {
   return (
-    <section className="px-5">
-      <div className="mx-auto max-w-lg">
+    <section className="w-full">
+      <div className="mx-auto max-w-lg px-5">
         <div className="mx-auto my-10 w-full max-w-xs overflow-hidden rounded-2xl border border-gray-300 text-center shadow-xl">
           <div className="relative">
             <p className="px-6 pt-6 pb-24 text-pretty italic">
@@ -117,8 +121,8 @@ const Price = ({ level, price }: { level: string; price: number }) => {
 
 const Prices = () => {
   return (
-    <section className="w-full border-t-2 border-gray-300 px-5 py-5">
-      <ul className="mx-auto grid w-full max-w-lg grid-cols-2 space-y-2 sm:grid-cols-4">
+    <section className="w-full border-t-2 border-gray-300 py-5">
+      <ul className="mx-auto grid w-full max-w-lg grid-cols-2 space-y-2 px-5 sm:grid-cols-4">
         <Price level="Key Stage 2" price={30} />
         <Price level="Key Stage 3" price={35} />
         <Price level="GCSE" price={35} />
@@ -130,8 +134,8 @@ const Prices = () => {
 
 const Contact = () => {
   return (
-    <section className="w-full border-t-2 border-gray-300 px-5 py-5">
-      <div className="mx-auto w-full max-w-lg">
+    <section className="w-full border-t-2 border-gray-300 py-5">
+      <div className="mx-auto w-full max-w-lg px-5">
         <p className="mb-3">
           If you would like to discuss English tutoring for your child, please
           contact me via one of the following channels.
