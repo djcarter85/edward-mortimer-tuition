@@ -54,7 +54,7 @@ const Hero = () => {
   );
 };
 
-const WhoAmI = () => {
+const AboutMe = () => {
   return (
     <section className="w-full py-5">
       <div className="mx-auto max-w-lg px-5">
@@ -172,7 +172,7 @@ export default function Home() {
     <main className="min-h-screen border-b-8 border-emerald-700 text-gray-900">
       <Header />
       <Hero />
-      <WhoAmI />
+      <AboutMe />
       <Prices />
       <Contact />
     </main>
