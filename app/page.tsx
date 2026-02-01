@@ -4,8 +4,8 @@ import edwardMortimer from "./edward-mortimer.jpg";
 
 const Header = () => {
   return (
-    <header className="w-full bg-linear-to-r/oklch from-emerald-700 to-teal-700 text-gray-100">
-      <h1 className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 px-5 py-3 text-center text-2xl leading-7 font-bold tracking-wider uppercase sm:text-3xl">
+    <header className="w-full bg-emerald-700 text-gray-100">
+      <h1 className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 px-5 py-3 sm:py-4 text-center text-2xl leading-7 font-bold tracking-wider uppercase sm:text-3xl">
         Edward Mortimer Tuition
       </h1>
     </header>
@@ -32,19 +32,19 @@ const ServiceListItem = ({ text }: { text: string }) => {
 
 const Hero = () => {
   return (
-    <section className="w-full">
-      <div className="mx-auto my-8 w-full max-w-lg space-y-6 px-5">
+    <section className="w-full bg-gray-200 py-8">
+      <div className="mx-auto w-full max-w-lg space-y-6 px-5">
         <h2 className="text-center font-serif text-3xl font-bold sm:text-4xl">
           Would your child benefit from high-quality English tuition?
         </h2>
-        <ul className="space-y-1 text-lg/7 text-gray-700">
+        <ul className="space-y-1 sm:text-lg/7 text-gray-700">
           <ServiceListItem text="Exam preparation" />
           <ServiceListItem text="Spelling, punctuation and grammar" />
           <ServiceListItem text="Reading comprehension" />
           <ServiceListItem text="Homework assignments" />
         </ul>
         <a
-          className="mx-auto block w-fit rounded-lg bg-emerald-700 px-5 py-2 text-center text-lg text-white hover:bg-emerald-800"
+          className="mx-auto block w-fit rounded-lg bg-emerald-700 px-5 py-2 text-center sm:text-lg text-white hover:bg-emerald-800"
           href="#contact"
         >
           Get in touch
@@ -56,7 +56,7 @@ const Hero = () => {
 
 const WhoAmI = () => {
   return (
-    <section className="w-full">
+    <section className="w-full py-5">
       <div className="mx-auto max-w-lg px-5">
         <SectionHeading text="About Me" />
         <div className="flex flex-col gap-x-4 sm:flex-row">
@@ -112,7 +112,7 @@ const Price = ({ level, price }: { level: string; price: number }) => {
 
 const Prices = () => {
   return (
-    <section className="w-full border-t-2 border-gray-300 py-5">
+    <section className="w-full bg-gray-200 py-5">
       <div className="mx-auto w-full max-w-lg px-5">
         <SectionHeading text="Prices" />
         <table className="mx-auto w-full max-w-md text-center">
@@ -129,12 +129,14 @@ const Prices = () => {
 };
 
 const SectionHeading = ({ text }: { text: string }) => {
-  return <h3 className="mb-3 font-serif text-2xl font-bold">{text}</h3>;
+  return (
+    <h3 className="mb-3 font-serif text-2xl font-bold sm:text-3xl sm:mb-4">{text}</h3>
+  );
 };
 
 const Contact = () => {
   return (
-    <section className="w-full border-t-2 border-gray-300 py-5">
+    <section className="w-full py-5">
       <div className="mx-auto w-full max-w-lg px-5">
         <a id="contact" />
         <SectionHeading text="Contact" />
@@ -167,7 +169,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen border-b-8 border-emerald-800 text-gray-900">
+    <main className="min-h-screen border-b-8 border-emerald-700 text-gray-900">
       <Header />
       <Hero />
       <WhoAmI />
