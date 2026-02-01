@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section className="w-full">
       <div className="mx-auto my-8 w-full max-w-lg space-y-6 px-5">
-        <h2 className="text-center text-3xl font-bold sm:text-4xl">
+        <h2 className="text-center font-serif text-3xl font-bold sm:text-4xl">
           Would your child benefit from high-quality English tuition?
         </h2>
         <ul className="space-y-1 text-lg/7 text-gray-700">
@@ -58,6 +58,7 @@ const WhoAmI = () => {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-lg px-5">
+        <SectionHeading text="About Me" />
         <div className="flex flex-col gap-x-4 sm:flex-row">
           <img
             src={edwardMortimer.src}
@@ -112,8 +113,9 @@ const Price = ({ level, price }: { level: string; price: number }) => {
 const Prices = () => {
   return (
     <section className="w-full border-t-2 border-gray-300 py-5">
-      <div className="mx-auto w-full max-w-md px-5">
-        <table className="w-full text-center">
+      <div className="mx-auto w-full max-w-lg px-5">
+        <SectionHeading text="Prices" />
+        <table className="mx-auto w-full max-w-md text-center">
           <tbody>
             <Price level="Key Stage 2" price={30} />
             <Price level="Key Stage 3" price={35} />
@@ -126,11 +128,16 @@ const Prices = () => {
   );
 };
 
+const SectionHeading = ({ text }: { text: string }) => {
+  return <h3 className="mb-3 font-serif text-2xl font-bold">{text}</h3>;
+};
+
 const Contact = () => {
   return (
     <section className="w-full border-t-2 border-gray-300 py-5">
       <div className="mx-auto w-full max-w-lg px-5">
         <a id="contact" />
+        <SectionHeading text="Contact" />
         <p className="mb-3">
           If you would like to discuss English tutoring for your child, please
           contact me via one of the following channels.
