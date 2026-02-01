@@ -5,7 +5,7 @@ import edwardMortimer from "./edward-mortimer.jpg";
 const Header = () => {
   return (
     <header className="w-full bg-linear-to-r/oklch from-emerald-700 to-teal-700 text-gray-100">
-      <h1 className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 px-5 py-2 text-center font-serif text-2xl tracking-wider uppercase">
+      <h1 className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 px-5 py-3 text-center text-2xl leading-7 font-bold tracking-wider uppercase sm:text-3xl">
         Edward Mortimer Tuition
       </h1>
     </header>
@@ -14,7 +14,7 @@ const Header = () => {
 
 const ListItem = ({ icon, text }: { icon: ReactNode; text: ReactNode }) => {
   return (
-    <li className="flex items-start gap-x-3 text-base/6">
+    <li className="flex items-start gap-x-3">
       <span className="flex h-lh items-center">{icon}</span>
       {text}
     </li>
@@ -34,23 +34,21 @@ const Hero = () => {
   return (
     <section className="w-full">
       <div className="mx-auto my-8 w-full max-w-lg space-y-6 px-5">
-        <h2 className="text-center text-3xl font-bold">
+        <h2 className="text-center text-3xl font-bold sm:text-4xl">
           Would your child benefit from high-quality English tuition?
         </h2>
-        <ul className="space-y-1">
+        <ul className="space-y-1 text-lg/7 text-gray-700">
           <ServiceListItem text="Exam preparation" />
           <ServiceListItem text="Spelling, punctuation and grammar" />
           <ServiceListItem text="Reading comprehension" />
           <ServiceListItem text="Homework assignments" />
         </ul>
-        <div className="text-center">
-          <a
-            className="rounded-lg bg-emerald-700 px-5 py-3 text-center text-lg text-white hover:bg-emerald-800"
-            href="mailto:edwardmortimer@live.com"
-          >
-            Get in touch
-          </a>
-        </div>
+        <a
+          className="mx-auto block w-fit rounded-lg bg-emerald-700 px-5 py-2 text-center text-lg text-white hover:bg-emerald-800"
+          href="#contact"
+        >
+          Get in touch
+        </a>
       </div>
     </section>
   );
@@ -132,11 +130,12 @@ const Contact = () => {
   return (
     <section className="w-full border-t-2 border-gray-300 py-5">
       <div className="mx-auto w-full max-w-lg px-5">
+        <a id="contact" />
         <p className="mb-3">
           If you would like to discuss English tutoring for your child, please
           contact me via one of the following channels.
         </p>
-        <ul className="mb-3 space-y-1">
+        <ul className="mb-3 space-y-1 text-base/6">
           <ListItem
             icon={<AtSign className="size-5 flex-none text-emerald-700" />}
             text={
@@ -161,7 +160,7 @@ const Contact = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen border-b-8 border-emerald-800">
+    <main className="min-h-screen border-b-8 border-emerald-800 text-gray-900">
       <Header />
       <Hero />
       <WhoAmI />
