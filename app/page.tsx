@@ -69,7 +69,7 @@ const AboutMe = () => {
           <img
             src={edwardMortimer.src}
             alt="Edward Mortimer"
-            className="mx-auto mb-4 max-w-48 rounded-xl shadow-xl"
+            className="mx-auto mb-4 w-48 rounded-xl shadow-xl"
           />
           <p className="mb-3 sm:text-lg">
             Hello! My name is <strong>Edward Mortimer</strong>, and I am an
