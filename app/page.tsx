@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section className="w-full bg-gray-200 py-8">
       <div className="mx-auto w-full max-w-2xl space-y-6 px-5">
-        <h2 className="text-center font-serif text-3xl font-bold sm:text-4xl md:text-5xl/tight">
+        <h2 className="text-center font-serif text-3xl font-bold text-pretty sm:text-4xl md:text-5xl/tight">
           Would your child benefit from high-quality English tuition?
         </h2>
         <ul className="space-y-1 text-gray-700 sm:text-lg/7">
