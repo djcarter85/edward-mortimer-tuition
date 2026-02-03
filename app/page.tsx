@@ -12,7 +12,13 @@ const Header = () => {
   );
 };
 
-const ListItem = ({ icon, text }: { icon: ReactNode; text: ReactNode }) => {
+const ListItem = ({
+  icon,
+  content: text,
+}: {
+  icon: ReactNode;
+  content: ReactNode;
+}) => {
   return (
     <li className="flex items-start gap-x-3">
       <span className="flex h-lh items-center">{icon}</span>
@@ -25,7 +31,7 @@ const ServiceListItem = ({ text }: { text: string }) => {
   return (
     <ListItem
       icon={<GraduationCap className="size-5 flex-none text-emerald-700" />}
-      text={<span>{text}</span>}
+      content={<span>{text}</span>}
     />
   );
 };
@@ -149,7 +155,7 @@ const Contact = () => {
         <ul className="mb-3 space-y-1 text-base/6">
           <ListItem
             icon={<AtSign className="size-5 flex-none text-emerald-700" />}
-            text={
+            content={
               <a
                 href="mailto:edwardmortimer@live.com"
                 className="underline hover:no-underline"
@@ -160,7 +166,7 @@ const Contact = () => {
           />
           <ListItem
             icon={<Phone className="size-5 flex-none text-emerald-700" />}
-            text={
+            content={
               <a
                 href="tel:+447775213822"
                 className="underline hover:no-underline"
