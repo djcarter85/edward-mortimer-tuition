@@ -160,7 +160,14 @@ const Contact = () => {
           />
           <ListItem
             icon={<Phone className="size-5 flex-none text-emerald-700" />}
-            text={<span>07775 213822</span>}
+            text={
+              <a
+                href="tel:+447775213822"
+                className="underline hover:no-underline"
+              >
+                07775 213822
+              </a>
+            }
           />
         </ul>
         <p className="mb-3">I look forward to hearing from you!</p>
