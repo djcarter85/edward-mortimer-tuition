@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Edward Mortimer Tuition",
-  description: "",
+  description: "High-quality English tuition for children in Cambridgeshire, including Sawtry, Huntingdon, the Alconburys and Cambridge.",
 };
 
 export default function RootLayout({
